@@ -1,5 +1,5 @@
 function starLine(n) {
-    ans = ""
+     var answer = "";
     for ( var i = 0; i<n; i++) {
         answer = answer + "**";
     }
