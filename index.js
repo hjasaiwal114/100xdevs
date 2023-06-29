@@ -12,6 +12,7 @@ function calculateSum(counter) {
 }
 
 function handleFirstRequest(req, res) {
+    var counter = req.query.counter;
     var calculateSum = calculateSum(100);
     console.log(calculateSum)
     var answer = "this sum is " + calculateSum;
