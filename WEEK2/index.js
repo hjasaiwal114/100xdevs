@@ -1,20 +1,20 @@
-const express  = require('express');
-const app = express();
-const port = 3000;
+const express = require('express')
+const app = express()
+const port = 3000
 
-function handelSum(req, res) {
+function handelSum(req, res){
     var finalSum = 0;
-    var upTo = res.quey.counter;
-    for (var i=0; i < upTo; i++) {
+    var upTo = req.query.counter;
+    for(var i = 0; i < upTo; i++){
         finalSum = finalSum + i;
     }
     var ans = `Sum is ${finalSum}`
     res.send(ans);
 }
 
-app.get('/handleSum', handleSum)
+app.get('/handleSum', handelSum)
 
-app.get('/',(req, res) => {
+app.get('/', (req, res) =>{
     res.send('Hello World!')
 })
 
